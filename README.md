@@ -43,16 +43,25 @@ _if any issues are discovered while navigating my site please let me know! It wi
 _Erika Debelis erika.debelis@gmail.com_
 
 
-Describe: robogersSequence()
+Describe: output()
 Test: "It should return an array with a 0 if the number 0 is inputted"
-Expect(robogersCompleteOutput(0).toEqual([0]);
+Code: output(0);
+Output:["0"]
 
-Test: "It should return an array with 0 at index 0 and "Beep!" at index 1 if the number 1 is inputted"
-Expect(robogersCompleteOutput("Beep!").toEqual([1]);
+Test: "It should return a string array in ascend order ending at inputted number"
+Code: output(6);
+Output:["0", "1", "2", "3", "4", "5", "6"]
 
-Test: "It should return an array with 0 at index 0, "Beep!" at index 1, and "Boop!" at index 2 if the number 2 is inputted"
-Expect(robogersCompleteOutput("Boop!").toEqual([2]);
 
-Test: "It should return an array with 0 at index 0, "Beep!" at index 1, and "Boop!" at index 2, and "Won't you be my neighbor?" at index 3 if the number 3 is inputted"
-Expect(robogersCompleteOutput("Won't you be my neighbor?").toEqual([3]);
+Test: "It should return a string array with 0 at index 0 and "Won't you be my neighbor?" if the number 3 is listed"
+Code: output(6);
+Output:["0", "1", "2", "Won't you be my neighbor?", "4", "5", "6"]
+
+Test: "It should return a string array with 0 at index 0 and "Won't you be my neighbor?", if the number 3 is listed and "Boop!" if the number 2 is listed""
+Code: output(6);
+Output:["0", "1", "Boop!", "Won't you be my neighbor?", "4", "5", "6"]
+
+Test: "It should return a string array with 0 at index 0 and "Won't you be my neighbor?" if the number 3 is listed, a "Boop!" if the number 2 is listed, and "Beep!" if 1 is listed."
+Code: output(6);
+Output:["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4", "5", "6"]
 

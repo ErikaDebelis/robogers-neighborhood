@@ -5,9 +5,7 @@
 
 //Business Logic
 
-let robogersOutput = []; //needed- must build dresser before putting away clothes
-
-let userInput = $("#robogersInteger").val(); //parseInt not needed currently- chose to turn all integers to strings in order to condense logic needed once dealing with beep boops. 
+let userInput = $("#robogersInteger").val(); 
 
 const inputArrayReturned = [];
 
@@ -21,20 +19,18 @@ function Output(userInput) {
     inputArrayReturned.sort(); //sort 0 - to inputted number
   }
 function transformNumbers(inputArrayReturned) {
-  let numberArrayMinusThrees = transformNumbers.forEach(function(numberArray, 3) {
+  let numberArrayMinusThrees = transformNumbers.forEach(function(numberArray, "3") {
   if (inputArrayReturned.includes("3")){
     newNumberArrayThrees = (inputArrayReturned.replace("3", "Won't you be my neighbor?"));
   }
-  let numberArrayMinusTwos = transformNumbers.forEach(function(numberArray, 2) {
-  if (inputArrayReturned.includes("2")){
-    newNumberArrayTwos = (inputArrayReturned.replace("2", "Boop!"));
+  let numberArrayMinusTwos = transformNumbers.forEach(function(numberArray, "2") {
+  if (newNumberArrayThrees.includes("2")){
+    newNumberArrayTwos = (newNumberArrayTwos.replace("2", "Boop!"));
   }
   let numberArrayMinusOnes = transformNumbers.forEach(function(numberArray, 1) {
-    if (inputArrayReturned.includes("1")){
-      newNumberArrayOnes = (inputArrayReturned.replace("1", "Beep!"));
+    if (newNumberArrayTwos.includes("1")){
+      newNumberArrayOnes = (newNumberArrayTwos.replace("1", "Beep!"));
 
-  let numberArrayMinusOnes; // return a string array
-}
 
 
 
@@ -79,7 +75,7 @@ function transformNumbers(inputArrayReturned) {
   $(document).ready(function() {
   ("#robogers-form").submit(function() {
     event.preventDefault(); //nested?
-    const robogersResult = robogersSequence(inputForm);
+    const robogersResult = numberArrayMinusOnes(inputArrayReturned);
     $("#result").text(robogersResult);
   });
 });
