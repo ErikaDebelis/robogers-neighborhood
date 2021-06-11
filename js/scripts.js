@@ -9,28 +9,31 @@ let userInput = $("#robogersInteger").val();
 
 const inputArrayReturned = [];
 
+let numberArray = [];
 
 
 
 function Output(userInput) {
-  let numberArray = createNumberArray(userInput);
+  numberArray = createNumberArray(userInput);
     for (let i = userInput; i >= 0; i--){ //for loop will start with inputted number and loop till it hit 0
     inputArrayReturned.push(i); //push to empty array 
     inputArrayReturned.sort(); //sort 0 - to inputted number
   }
 function transformNumbers(inputArrayReturned) {
-  let numberArrayMinusThrees = transformNumbers.forEach(function(numberArray, "3") {
+  let numberArrayMinusThrees = transformNumbers.forEach(function(numberArray) {
   if (inputArrayReturned.includes("3")){
     newNumberArrayThrees = (inputArrayReturned.replace("3", "Won't you be my neighbor?"));
   }
-  let numberArrayMinusTwos = transformNumbers.forEach(function(numberArray, "2") {
+  let numberArrayMinusTwos = transformNumbers.forEach(function(numberArray) {
   if (newNumberArrayThrees.includes("2")){
     newNumberArrayTwos = (newNumberArrayTwos.replace("2", "Boop!"));
   }
-  let numberArrayMinusOnes = transformNumbers.forEach(function(numberArray, 1) {
-    if (newNumberArrayTwos.includes("1")){
-      newNumberArrayOnes = (newNumberArrayTwos.replace("1", "Beep!"));
-
+  let numberArrayMinusOnes = transformNumbers.forEach(function(numberArray) {
+  if (newNumberArrayTwos.includes("1")){
+    newNumberArrayOnes = (newNumberArrayTwos.replace("1", "Beep!"));
+    return newNumberArrayOnes;
+  }
+  });
 
 
 
@@ -72,10 +75,10 @@ function transformNumbers(inputArrayReturned) {
 
 
 //UI Logic
-  $(document).ready(function() {
-  ("#robogers-form").submit(function() {
+$(document).ready(function() {
+  ("form#robogers-form").submit(function(event) {
     event.preventDefault(); //nested?
     const robogersResult = numberArrayMinusOnes(inputArrayReturned);
     $("#result").text(robogersResult);
-  });
+  }
 });
