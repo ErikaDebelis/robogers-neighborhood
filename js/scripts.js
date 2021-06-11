@@ -17,16 +17,15 @@ function robogersSequence(number) {
     inputArrayReturned.push(i);
   }
 }
-let inputToString = inputArrayReturned.toString(); //changes for loop sequence from numbers to a string
-let inputToSeparateStrings = inputToString.split(",")
+let inputToString = inputArrayReturned.toString(); //changes for loop sequence from numbers to a single string
+let inputToSeparateStrings = inputToString.split(",")//changes for loop sequence from a single string to separate strings designated by commas
 
-//input = 6
-// inputArrayReturned = [6, 5, 4, 3, 2, 1, 0] 
-//forEach 
+
 inputToSeparateStrings.forEach(function(element) {
   if (inputForm.includes("3")){
   let ruleThree = inputForm.replace("3", "Won't you be my neighbor?");
   robogersOutput.push(ruleThree); //need to use push not concat so rules stack
+  console.log(robogersOutput)
     if (inputForm.includes("2")){
       let ruleTwo = inputForm.replace("2", "Boop!");
       robogersOutput.push(ruleTwo); // nested in rule three so numbers like 23 will have already been changed to 'will you be my neighbor'
@@ -34,22 +33,18 @@ inputToSeparateStrings.forEach(function(element) {
         let ruleOne = inputForm.replace("1", "Beep!");
         robogersOutput.push(ruleOne); //nested in rule two so numbers like 12 will have already been changed to 'boop!'
       }
+      }else{
+        robogersOutput.push(element);
+      }
     }
-  }else{
-    return inputArrayReturned;
-  }
-});
-
-
-
+  });
 
 
 //UI Logic
-$(document).ready(function() {
+  $(document).ready(function() {
   ("#robogers-form").submit(function() {
     event.preventDefault(); //nested?
-    const inputSubmitted = $("input#robogersInteger").val();
-    const robogersResult = robogersSequence(inputSubmitted);
+    const robogersResult = robogersSequence(inputForm);
     $("#result").text(robogersResult);
   });
 });
