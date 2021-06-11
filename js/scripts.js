@@ -15,9 +15,9 @@ let numberArray = [];
 
 function Output(userInput) {
   numberArray = createNumberArray(userInput);
-    for (let i = userInput; i >= 0; i--){ //for loop will start with inputted number and loop till it hit 0
-    inputArrayReturned.push(i); //push to empty array 
-    inputArrayReturned.sort(); //sort 0 - to inputted number
+    for (let i = userInput; i >= 0; i--){ 
+    inputArrayReturned.push(i); 
+    inputArrayReturned.sort(); 
   }
 function transformNumbers(inputArrayReturned) {
   let numberArrayMinusThrees = transformNumbers.forEach(function(numberArray) {
@@ -31,54 +31,17 @@ function transformNumbers(inputArrayReturned) {
   let numberArrayMinusOnes = transformNumbers.forEach(function(numberArray) {
   if (newNumberArrayTwos.includes("1")){
     newNumberArrayOnes = (newNumberArrayTwos.replace("1", "Beep!"));
-    return newNumberArrayOnes;
   }
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-// function robogersSequence(number) {
-//   for (let i = number; i >= 0; i--){ //for loop will start with inputted number and loop till it hit 0
-//     inputArrayReturned.push(i);
-//   }
-// }
-// let inputToString = inputArrayReturned.toString(); //changes for loop sequence from numbers to a single string
-// let inputToSeparateStrings = inputToString.split(",")//changes for loop sequence from a single string to separate strings designated by commas
-
-
-// inputToSeparateStrings.forEach(function(element) {
-//   if (inputForm.includes("3")){
-//   let ruleThree = inputForm.replace("3", "Won't you be my neighbor?");
-//   robogersOutput.push(ruleThree); //need to use push not concat so rules stack
-//   console.log(robogersOutput)
-//     if (inputForm.includes("2")){
-//       let ruleTwo = inputForm.replace("2", "Boop!");
-//       robogersOutput.push(ruleTwo); // nested in rule three so numbers like 23 will have already been changed to 'will you be my neighbor'
-//       if (inputForm.includes("1")){
-//         let ruleOne = inputForm.replace("1", "Beep!");
-//         robogersOutput.push(ruleOne); //nested in rule two so numbers like 12 will have already been changed to 'boop!'
-//       }
-//       }else{
-//         robogersOutput.push(element);
-//       }
-//     }
-//   });
+  return transformNumbers(newNumberArrayOnes);
+});
 
 
 //UI Logic
 $(document).ready(function() {
-  ("form#robogers-form").submit(function(event) {
-    event.preventDefault(); //nested?
+  $("form#robogers-form").submit(function(event) {
+    event.preventDefault(); 
     const robogersResult = numberArrayMinusOnes(inputArrayReturned);
     $("#result").text(robogersResult);
-  }
+    }
+  };
 });
