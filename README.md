@@ -43,7 +43,7 @@ _if any issues are discovered while navigating my site please let me know! It wi
 _Erika Debelis erika.debelis@gmail.com_
 
 
-Describe: beepBoop()
+Describe: robogersSequence()
 Test: "It should return an array with a 0 if the number 0 is inputted"
 Expect(robogersCompleteOutput(0).toEqual([0]);
 
