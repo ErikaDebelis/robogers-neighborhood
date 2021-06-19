@@ -7,11 +7,11 @@ function output(robogersInteger) {
   const inputArrayReturned = [];
   for (let i = 0; i <= robogersInteger; i++) {
     if (i.toString().includes(3)) {
-      inputArrayReturned.push("Won't you be my neighbor?");
+      inputArrayReturned.push("'Won't you be my neighbor?'");
     } else if (i.toString().includes(2)) {
-      inputArrayReturned.push("Boop!");
+      inputArrayReturned.push("'Boop!'");
     } else if (i.toString().includes(1)) {
-      inputArrayReturned.push("Beep!");
+      inputArrayReturned.push("'Beep!'");
     } else {
       inputArrayReturned.push(i);
     }
