@@ -1,6 +1,6 @@
 # _Programming Language Suggester_
 
-#### _A website that allows user to input a numberand once submitted will then output a list of numbers going up to the number submitted while replacing  an integers that include 1s, 2s, or 3s, based on the rule priorities. 3's rule will override the rules for 2 and 1, 2's rule will override the rule for 1, and 1 only applies if the integer includes a '1' and does also include a 2 or a 3._
+#### _A website that allows user to input a number and once submitted will then output a list of numbers going up to the number submitted while replacing  an integers that include 1s, 2s, or 3s, based on the rule priorities. 3's rule will override the rules for 2 and 1, 2's rule will override the rule for 1, and 1 only applies if the integer includes a '1' and does also include a 2 or a 3._
 
 #### _By Erika Debelis_
 
